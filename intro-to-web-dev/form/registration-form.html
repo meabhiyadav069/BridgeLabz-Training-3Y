@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #628a2e; /* Light pink background */
+            font-family: "Times New Roman", Times, serif; /* Matches the serif font in the image */
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .form-container {
+            width: 700px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px 0;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        /* Target the label column */
+        td:first-child {
+            width: 25%;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        textarea {
+            padding: 4px 6px;
+            font-size: 14px;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+
+        .long-input {
+            width: 380px;
+        }
+
+        .short-input {
+            width: 180px;
+        }
+
+        .date-input {
+            width: 60px;
+        }
+
+        .radio-check-group label {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .radio-check-group input {
+            transform: scale(1.2);
+            margin-right: 5px;
+        }
+
+        .hint-text {
+            font-style: italic;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        .submit-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .submit-btn-container button {
+            padding: 5px 25px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 1px solid #777;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+
+        <form>
+            <table>
+                <tr>
+                    <td>Roll no. :</td>
+                    <td><input type="text" class="long-input"></td>
+                </tr>
+
+                <tr>
+                    <td>Student name :</td>
+                    <td>
+                        <input type="text" class="short-input" placeholder="First Name"> - 
+                        <input type="text" class="short-input" placeholder="Last Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Father's name :</td>
+                    <td><input type="text" class="long-input"></td>
+                </tr>
+
+                <tr>
+                    <td>Date of birth :</td>
+                    <td>
+                        <input type="text" class="date-input" placeholder="Day"> - 
+                        <input type="text" class="date-input" placeholder="Month"> - 
+                        <input type="text" class="date-input" placeholder="Year" style="width: 70px;"> 
+                        <span class="hint-text">(DD-MM-YYYY)</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mobile no. :</td>
+                    <td>
+                        <input type="text" value="+91" style="width: 45px; text-align: center;" readonly> - 
+                        <input type="text" style="width: 317px;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email id :</td>
+                    <td><input type="email" class="long-input"></td>
+                </tr>
+
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="password" class="long-input"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender :</td>
+                    <td class="radio-check-group">
+                        <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Department :</td>
+                    <td class="radio-check-group">
+                        <input type="checkbox" id="cse"> <label for="cse">CSE</label>
+                        <input type="checkbox" id="it"> <label for="it">IT</label>
+                        <input type="checkbox" id="ece"> <label for="ece">ECE</label>
+                        <input type="checkbox" id="civil"> <label for="civil">Civil</label>
+                        <input type="checkbox" id="mech"> <label for="mech">Mech</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Course :</td>
+                    <td>
+                        <select class="long-input">
+                            <option>----------------------- Select Current Course's -----------------------</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="AIML">AIML</option>
+                            <option value="Web Development">Web Development</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Student photo :</td>
+                    <td><input type="file"></td>
+                </tr>
+
+                <tr>
+                    <td>City :</td>
+                    <td><input type="text" class="long-input"></td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align: top; padding-top: 15px;">Address :</td>
+                    <td><textarea class="long-input" style="height: 100px; resize: none;"></textarea></td>
+                </tr>
+            </table>
+
+            <div class="submit-btn-container">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
