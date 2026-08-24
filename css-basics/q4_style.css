@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #FBFAF8;
+    color: #2B2B2B;
+    line-height: 1.7;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+.subheading {
+    text-align: center;
+    color: #777777;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* ===== Consistent spacing between paragraphs ===== */
+article p {
+    margin: 0 0 24px 0;
+    font-size: 1.05rem;
+}
+
+/* ===== Style first letter of each paragraph ===== */
+article p::first-letter {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #8B4A2B;
+    margin-right: 2px;
+}
+
+/* ===== Make first line of each paragraph bold ===== */
+article p::first-line {
+    font-weight: bold;
+}
+
+/* ===== Highlighted keywords ===== */
+mark {
+    background-color: #FCE8B0;
+    color: #2B2B2B;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+/* ===== Blockquote emphasis ===== */
+blockquote {
+    border-left: 4px solid #8B4A2B;
+    background-color: #F3ECE4;
+    padding: 16px 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #4A3B32;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999999;
+    font-size: 0.9rem;
+    border-top: 1px solid #E5E0D8;
+}

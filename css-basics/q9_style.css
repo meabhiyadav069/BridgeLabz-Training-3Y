@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-color: #EDE7DD;   /* newspaper-like off-white */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222222;
+}
+
+.magazine-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 5%;
+}
+
+/* ===== Heading spans across all columns ===== */
+.magazine-title {
+    column-span: all;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #222222;
+    padding-bottom: 16px;
+}
+
+/* ===== Three vertical text columns ===== */
+.column-wrapper {
+    column-count: 3;
+    column-gap: 36px;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.column-wrapper p {
+    margin: 0 0 16px 0;
+}
+
+/* ===== Image floated left within the column layout ===== */
+.float-img {
+    float: left;
+    width: 160px;
+    margin: 0 16px 8px 0;
+    border-radius: 4px;
+}
+
+/* ===== Responsive: reduce columns on smaller screens ===== */
+@media (max-width: 800px) {
+    .column-wrapper {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .column-wrapper {
+        column-count: 1;
+    }
+
+    .float-img {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+}

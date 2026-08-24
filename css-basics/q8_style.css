@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F1F4F6;
+    color: #22303C;
+}
+
+/* ===== Fixed header ===== */
+.dash-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #22303C;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 100;
+}
+
+.dash-header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* ===== Body: sidebar + content, using flexbox ===== */
+.dash-body {
+    display: flex;
+    margin-top: 60px;     /* offset for fixed header */
+    min-height: calc(100vh - 60px);
+}
+
+/* ===== Sidebar: full height ===== */
+.sidebar {
+    width: 220px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #DCE3E8;
+    padding: 24px 0;
+    flex-shrink: 0;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #4A5A66;
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sidebar nav a:hover {
+    background-color: #EAF1F4;
+    border-left: 3px solid #4A90A4;
+    color: #22303C;
+}
+
+/* ===== Main content area ===== */
+.content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-box {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.content-box h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #22303C;
+}
+
+.content-box p {
+    color: #5C6B75;
+    line-height: 1.6;
+}
+
+/* ===== Responsive: stack sidebar above content ===== */
+@media (max-width: 700px) {
+    .dash-body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #DCE3E8;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}

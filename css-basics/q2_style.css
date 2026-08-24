@@ -1,0 +1,96 @@
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #1B1B1B;
+    color: #FFFFFF;
+}
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #0D0D0D;
+}
+
+header h1 {
+    font-size: 3rem;      /* larger heading weight/size */
+    font-weight: 700;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background-color: #262626;
+}
+
+nav a {
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Shared section styling ===== */
+.section {
+    width: 100%;
+    padding: 80px 10%;
+    margin: 0;
+    border-bottom: 2px solid #333;
+}
+
+.section h2 {
+    font-size: 2.2rem;    /* different size than header */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+/* ===== Linear gradient section ===== */
+.gradient-linear {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+}
+
+/* ===== Radial gradient section ===== */
+.gradient-radial {
+    background: radial-gradient(circle at center, #5B247A, #1BCEDF);
+}
+
+/* ===== Parallax-like fixed background sections ===== */
+.parallax {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;   /* creates the parallax-like scroll effect */
+    color: #FFFFFF;
+}
+
+.nature-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('mountains.jpg');
+}
+
+.travel-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('valley.jpg');
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0D0D0D;
+    font-size: 0.9rem;
+    color: #AAAAAA;
+}

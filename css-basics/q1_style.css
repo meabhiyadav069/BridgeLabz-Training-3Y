@@ -1,0 +1,98 @@
+/* ===== Base setup ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #16202A;   /* deep slate background */
+    color: #E8EDF1;              /* light text for contrast */
+    min-height: 100vh;           /* vh unit: fill full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Fixed header ===== */
+.site-header {
+    position: fixed;      /* stays at top while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;         /* rem unit */
+    background-color: #0F1720;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;        /* percentage unit for responsive side padding */
+    box-sizing: border-box;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #6FCF97;   /* accent green, contrasts with dark background */
+}
+
+.site-header nav a {
+    color: #E8EDF1;
+    text-decoration: none;
+    margin-left: 24px;   /* px unit */
+    font-size: 16px;     /* px unit */
+    transition: color 0.2s ease-in-out;
+}
+
+.site-header nav a:hover {
+    color: #6FCF97;
+}
+
+/* ===== Main bio section ===== */
+/* Push content below the fixed header */
+main {
+    flex: 1;              /* pushes footer to bottom via flexbox */
+    margin-top: 4rem;
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.bio-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6FCF97;
+    flex-shrink: 0;
+}
+
+.bio-text {
+    font-size: 1.1em;    /* em unit, relative to parent font-size */
+    line-height: 1.6;
+    color: #C9D4DC;
+}
+
+/* ===== Footer always at bottom ===== */
+.site-footer {
+    background-color: #0F1720;
+    color: #8FA1AD;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* ===== Responsive: stack bio on small screens ===== */
+@media (max-width: 600px) {
+    .bio-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}

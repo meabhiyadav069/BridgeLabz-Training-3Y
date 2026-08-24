@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F4F6F8;
+    color: #22303C;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #22303C;
+    color: #FFFFFF;
+}
+
+/* ===== 3-column layout using flexbox ===== */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;   /* equal card height */
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+}
+
+/* ===== Box model applied uniformly ===== */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #D8DEE3;
+    border-radius: 12px;
+    padding: 30px 24px;
+    margin: 0;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h2 {
+    margin-bottom: 6px;
+    font-size: 1.3rem;
+}
+
+.role {
+    color: #4A90A4;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #5C6B75;
+}
+
+/* ===== Highlighted Team Lead card ===== */
+.card.lead {
+    background-color: #22303C;
+    color: #FFFFFF;
+    border: 2px solid #6FCF97;
+}
+
+.card.lead .role {
+    color: #6FCF97;
+}
+
+.card.lead .desc {
+    color: #C9D4DC;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #5C6B75;
+    font-size: 0.9rem;
+}
+
+/* ===== Responsive: single column below 600px ===== */
+@media (max-width: 600px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
