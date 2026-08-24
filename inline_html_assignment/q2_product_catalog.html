@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Catalog</title>
+</head>
+<body>
+
+    <header>
+        <h1>Online Store - Product Catalog</h1>
+    </header>
+
+    <main>
+        <table border="1" cellpadding="8">
+            <!-- Table header row -->
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Availability</th>
+            </tr>
+
+            <!-- Product 1 -->
+            <tr>
+                <td><img src="laptop.jpg" alt="Laptop" width="80"></td>
+                <td>Laptop</td>
+                <td>15-inch laptop with 16GB RAM and 512GB SSD</td>
+                <td>Rs. 55,000</td>
+                <td>In Stock</td>
+            </tr>
+
+            <!-- Product 2 -->
+            <tr>
+                <td><img src="headphones.jpg" alt="Headphones" width="80"></td>
+                <td>Wireless Headphones</td>
+                <td>Noise cancelling over-ear headphones</td>
+                <td>Rs. 3,500</td>
+                <td>In Stock</td>
+            </tr>
+
+            <!-- Product 3: Example using colspan for a note row -->
+            <tr>
+                <td><img src="phone.jpg" alt="Smartphone" width="80"></td>
+                <td>Smartphone</td>
+                <td>6.5-inch display, 128GB storage</td>
+                <td>Rs. 22,000</td>
+                <td>Out of Stock</td>
+            </tr>
+
+            <!-- Product 4: Example using rowspan for same category -->
+            <tr>
+                <td rowspan="2"><img src="watch.jpg" alt="Smartwatch" width="80"></td>
+                <td>Smartwatch - Black</td>
+                <td>Fitness tracking smartwatch with heart rate monitor</td>
+                <td>Rs. 4,000</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Smartwatch - Silver</td>
+                <td>Same model, different color</td>
+                <td>Rs. 4,000</td>
+                <td>In Stock</td>
+            </tr>
+
+            <!-- Footer note row spanning all columns -->
+            <tr>
+                <td colspan="5">Prices are subject to change without prior notice.</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Online Store</p>
+    </footer>
+
+</body>
+</html>
